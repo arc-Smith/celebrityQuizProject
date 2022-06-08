@@ -1,0 +1,48 @@
+body{
+  background-color: cadetblue;
+}
+#title{
+  text-align: center;
+  color: white;
+}
+#start{
+  color: black;
+  position: absolute;
+  margin-left: 60%;
+  margin-top: -3.35%;
+}
+#start:hover{
+  background-color: brown;
+  color: yellow;
+}
+#timer{
+  text-align: center;
+  color: white;
+}
+table, th, td{
+  border: 1px solid black;
+}
+td{
+  text-align: center;
+}
+#answers{
+  margin-left: 0%;
+  width: 30%;
+  height: 400px;
+  color: black;
+  float:left;
+  background-color: brown;
+  display: none;
+}
+#answers td{
+  color: yellow;
+}
+#questions{
+  margin-left: 20%;
+  width: 30%;
+  height: 400px;
+  color: black;
+  float: left;
+  background-color: white;
+  display: none;
+}
