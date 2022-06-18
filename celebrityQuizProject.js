@@ -50,11 +50,6 @@ function showQuestion(){
     answer = answer.toLowerCase();
     let userAnswer = window.prompt(question, 'type in a,b,c,d,e,f,g,h, or i');
     userAnswer = userAnswer.toLowerCase();
-    while(userAnswer!==='a' && userAnswer!==='b' && userAnswer!==='c' && userAnswer!==='d' && userAnswer!==='e' && userAnswer!==='f' 
-          && userAnswer!==='g' && userAnswer!==='h' && userAnswer!==='i'){
-      userAnswer = window.prompt(question, 'ERROR: must type in a,b,c,d,e,f,g,h, or i');
-      userAnswer = userAnswer.toLowerCase();
-    }
     if(userAnswer===answer){
       score++;
     }
