@@ -1,21 +1,21 @@
 /* Code below sets up the the game */
 let questionArray = [
-  ['Who was slapped by Will Smith?', 'Chris Rock', 'A'],
+  ['Who has played the role of Mark Zuckerberg?', 'Jesse Eisenberg', 'A'],
   ['Who was sued by Amber Heard?', 'Johnny Depp', 'B'],
   ['Who had an NFT made of them dunking?', 'LeBron James', 'C'],
-  ['Kayne West vs...', 'Pete Davidson', 'D'],
+  ['Who is known for their chess aptitude?', 'Magnus Carlsen', 'D'],
   ['Who has played the role of Batman?', 'Christian Bale', 'E'],
   ['Who made an offer to buy Twitter?', 'Elon Musk', 'F'],
-  ['Who has pursued space exploration, besides Elon?', 'Jeff Bezos', 'G'],
+  ['Who has pursued space exploration, besides Elon Musk?', 'Jeff Bezos', 'G'],
   ['Who created Bitcoin?', 'Satoshi Nakamoto', 'H'],
   ['Popular canadian rapper?', 'Drake', 'I']
 ]; //an array is just a list of something
 
 let imageArray = [
-  'rock.jpg',
+  'jesse.jpg',
   'depp.jpg',
   'lebron.jpg',
-  'pete.jpg',
+  'magnus.jpg',
   'bruce.jpg',
   'musk.jpg',
   'bezos.jpg',
@@ -41,23 +41,6 @@ let answerTable = document.getElementById('answers'); //connects to the answer t
 let startButton = document.getElementById('start'); //connects to the start button from the HTML
 /* Code above sets up the the game */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function showQuestion(){
   if(numOfQuestions!==0){
 
@@ -66,11 +49,6 @@ function showQuestion(){
     let answer = questionArray[option][2];
     answer = answer.toLowerCase();
     let userAnswer = window.prompt(question, 'type in a,b,c,d,e,f,g,h, or i');
-    userAnswer = userAnswer.toLowerCase();
-    while(userAnswer !== 'a' && userAnswer !== 'b' && userAnswer !== 'c' && userAnswer !== 'd' && userAnswer !== 'e' && userAnswer !== 'f' && userAnswer !== 'g' && userAnswer !== 'h' && userAnswer !== 'i'){
-      userAnswer = window.prompt(question, 'ERROR: type in a,b,c,d,e,f,g,h, or i');
-      userAnswer = userAnswer.toLowerCase();
-    }
     if(userAnswer===answer){
       score++;
     }
@@ -104,8 +82,8 @@ function startTimer(){
       clearInterval(timerId); /*important because this ensures that the timer is stopped*/
       questionTable.style.display = "none";
       answerTable.style.display = "none";
-      questionArray = [['Who was slapped by Will Smith?', 'Chris Rock', 'A'],['Who was sued by Amber Heard?', 'Johnny Depp', 'B'],['Who had an NFT made of them dunking?', 'LeBron James', 'C'],['Kayne West vs...', 'Pete Davidson', 'D'],['Who has played the role of Batman?', 'Christian Bale', 'E'],['Who made an offer to buy Twitter?', 'Elon Musk', 'F'],['Who has pursued space exploration, besides Elon?', 'Jeff Bezos', 'G'],['Who created Bitcoin?', 'Satoshi Nakamoto', 'H'],['Popular canadian rapper?', 'Drake', 'I']];
-      answerArray = ['Chris Rock','Johnny Depp','LeBron James','Pete Davidson','Christian Bale','Elon Musk','Jeff Bezos','Satoshi Nakamoto','Drake'];
+      questionArray = [['Who has played the role of Mark Zuckerberg?', 'Jesse Eisenberg', 'A'],['Who was sued by Amber Heard?', 'Johnny Depp', 'B'],['Who had an NFT made of them dunking?', 'LeBron James', 'C'],['Who is known for their chess aptitude?', 'Magnus Carlsen', 'D'],['Who has played the role of Batman?', 'Christian Bale', 'E'],['Who made an offer to buy Twitter?', 'Elon Musk', 'F'],['Who has pursued space exploration, besides Elon?', 'Jeff Bezos', 'G'],['Who created Bitcoin?', 'Satoshi Nakamoto', 'H'],['Popular canadian rapper?', 'Drake', 'I']];
+      answerArray = ['Jesse Eisenberg','Johnny Depp','LeBron James','Magnus Carlsen','Christian Bale','Elon Musk','Jeff Bezos','Satoshi Nakamoto','Drake'];
       numOfQuestions = startingAmount;
       score = 0;
       startButton.style.display = "block";
