@@ -69,7 +69,7 @@ function startTimer(){
   questionTable.style.display = 'table'; /*makes the table visible because it is initially hidden*/
   answerTable.style.display = 'table'; /*makes the table visible because it is initially hidden*/
   startButton.style.display = 'none'; /*makes the start button hidden so that it is not clicked again*/
-  let timeLeft = 10; /*the starting amount of seconds for the timer*/
+  let timeLeft = 15; /*the starting amount of seconds for the timer*/
   let element = document.getElementById('timer'); /*connects to an H3 tag used to show how many seconds are left*/
   let timerId = setInterval(function(){ /*a function used to decrement by 1 from the seconds and used to reset the timer after -1 seconds is reached*/
     if(timeLeft === -1){
